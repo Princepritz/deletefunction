@@ -8,6 +8,15 @@ item[2].style.backgroundColor='green';
 
 for(var i=0;i<item.length;i++){
     item[i].style.fontWeight='bold';
+    //item[i].style.backgroundColor='grey';
 }
+
+
+var item=document.getElementsByTagName('li');
+console.log(item);
+item[4].style.backgroundColor='green';
+
+
+    item[4].style.fontWeight='bold';
 
 

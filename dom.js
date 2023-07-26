@@ -1,23 +1,38 @@
 
-const head=document.getElementById('header-title');
-head.style.borderBottom="solid 3px #000"
-console.log(head);
 
-var item=document.getElementsByClassName('list-group-item');
-item[2].style.backgroundColor='green';
+var itemlist=document.querySelector('#items');
+  
+console.log(itemlist.parentNode.parentNode.parentNode);
+itemlist.parentNode.style.backgroundColor='grey';
 
-for(var i=0;i<item.length;i++){
-    item[i].style.fontWeight='bold';
-    //item[i].style.backgroundColor='grey';
-}
+//console.log(itemlist.childNodes);
+//console.log(itemlist.children[0].style.backgroundColor='pink');
+console.log(itemlist.firstChild);
+console.log(itemlist.firstElementChild);
+//itemlist.firstElementChild.textContent='pritam';
+console.log(itemlist.lastElementChild);
+itemlist.lastElementChild.textContent='hellow4';
+console.log(itemlist.nextSibling);
+console.log(itemlist.previousSibling);
+console.log(itemlist.previousElementSibling);
 
-var hh=document.querySelector('.list-group-item:nth-child(2)');
-hh.style.color='green';
+var newdiv=document.createElement('div');
+newdiv.className='hello';
+newdiv.id='hello1';
+
+var newdivtext=document.createTextNode(' HEllo word ');
+
+newdiv.appendChild(newdivtext);
+
+newdiv.setAttribute('title','hello div');
+
+var container=document.querySelector('header .container');
+var h1=document.querySelector('header h1');
+
+var after=document.querySelector('.list-group');
+var before=document.querySelectorAll('.list-group-item:nth-child(1)');
  
-var odd=document.querySelectorAll('li:nth-child(odd)');
 
+container.insertBefore(newdiv,h1);
 
-for(var i=0;i<odd.length;i++){
-    odd[i].style.backgroundColor='green';
-}
-
+console.log(newdiv);
